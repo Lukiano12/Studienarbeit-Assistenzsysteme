@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1736255013.15451 "main.bcf" "main.bbl" "main" 1736255044.66383 0
+["biber main"] 1736255013.15451 "main.bcf" "main.bbl" "main" 1736258771.4403 0
   "literatur.bib" 1736254223 2410 3c1dd3da752bf827c923850fd0ade246 ""
-  "main.bcf" 1736255042 107807 33322a03566e950d59ca4e7a1aa9470a "pdflatex"
+  "main.bcf" 1736258770 107807 33322a03566e950d59ca4e7a1aa9470a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1736255035.79964 "g:/Studienarbeit-Assistenzsysteme/main.tex" "main.pdf" "main" 1736255044.66932 0
+["pdflatex"] 1736258763.68533 "g:/Studienarbeit-Assistenzsysteme/main.tex" "main.pdf" "main" 1736258771.44407 0
   "C:/Users/lnztadil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736254786 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/lnztadil/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1736253204 12668 71787c05ba9ddee282fdea21579e64bb ""
   "C:/Users/lnztadil/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1736253089 11995304 eb16bad033a90ec70c55b78192ef3408 ""
@@ -162,14 +162,14 @@
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693732032 123 a302f2c651a95033260db60e51527ae8 ""
   "docs/EingebundenesPDF.pdf" 1736232917 55921 bc7370b1df3f13065faa227be4b4bf5c ""
-  "g:/Studienarbeit-Assistenzsysteme/main.tex" 1736255002 10280 c333424575e40818d95897c83ae77b63 ""
+  "g:/Studienarbeit-Assistenzsysteme/main.tex" 1736258762 10382 66837c566a78cad6b25c7e1a9072a9d2 ""
   "images/DHBW_d_R_FN_46mm_4c.jpg" 1736232917 17946 50287553cf5cb047b6c145a2811653f1 ""
-  "main.aux" 1736255042 5474 fa12d1562959a87a0cf0e60f72d4cf41 "pdflatex"
+  "main.aux" 1736258770 5474 fa12d1562959a87a0cf0e60f72d4cf41 "pdflatex"
   "main.bbl" 1736255017 4182 a1d6e0e86ca6b3d8d0e95a07ee725738 "biber main"
-  "main.out" 1736255038 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1736255042 2431 c5bf256f8e4580f023f9de0aa9eb28e2 "pdflatex"
-  "main.tex" 1736255002 10280 c333424575e40818d95897c83ae77b63 ""
-  "main.toc" 1736255042 708 a7b094f0093c50dd9d56a949160bd4bf "pdflatex"
+  "main.out" 1736258767 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1736258770 2431 c5bf256f8e4580f023f9de0aa9eb28e2 "pdflatex"
+  "main.tex" 1736258762 10382 66837c566a78cad6b25c7e1a9072a9d2 ""
+  "main.toc" 1736258770 708 a7b094f0093c50dd9d56a949160bd4bf "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
