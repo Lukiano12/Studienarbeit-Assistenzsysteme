@@ -1,16 +1,47 @@
-\documentclass{scrbook} % Use scrbook class from KOMA-Script bundle
+\documentclass{scrbook} % KOMA-Script book class
+
+%---------------------------------------------------------
+% Encoding, language, quotes
+%---------------------------------------------------------
 \usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}       % German language & hyphenation
+\usepackage{csquotes}             % Recommended for quotes with babel/polyglossia
+
+%---------------------------------------------------------
+% Graphics & PDF
+%---------------------------------------------------------
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{pdfpages}             % For including PDF pages
+\usepackage{caption}              % For \captionabove
+\usepackage{subcaption}
+
+%---------------------------------------------------------
+% Math, units, spacing, etc.
+%---------------------------------------------------------
+\usepackage{siunitx}
+\usepackage{setspace}
+\usepackage{textgreek}
+
+%---------------------------------------------------------
+% Other packages
+%---------------------------------------------------------
 \usepackage{ifthen}
-\usepackage[ngerman]{babel} % Add this line for German quotation marks
-\usepackage{pdfpages} % For including PDF pages
-\usepackage{caption} % For \captionabove
-\usepackage{array} % For better table formatting
-\usepackage{enumitem} % For better control over itemize
+\usepackage{acronym}
+\PassOptionsToPackage{hyphens}{url}% Tells url/hyperref to allow breaks at hyphens
+\usepackage[breaklinks=true]{hyperref} 
+\usepackage{array}                % Better table formatting
+\usepackage{enumitem}             % Control over itemize environment
 \usepackage{nomencl}
 
-% Define custom commands for placeholders
+%---------------------------------------------------------
+% Bibliography (biblatex with Biber)
+%---------------------------------------------------------
+\usepackage[backend=biber, style=ieee]{biblatex}  
+\addbibresource{literatur.bib}  
+
+%---------------------------------------------------------
+% Custom placeholders
+%---------------------------------------------------------
 \newcommand{\titel}{Your Title}
 \newcommand{\untertitel}{Your Subtitle}
 \newcommand{\arbeit}{Studienarbeit T3100}
@@ -24,37 +55,48 @@
 \newcommand{\firma}{}
 \newcommand{\betreuerfirma}{Prof. Dr. Ing. Tobias Frank}
 \newcommand{\gutachterdhbw}{Prof. Dr. Ing. Tobias Frank}
-\newcommand{\jahr}{Year}
+\newcommand{\jahr}{2025} % or \the\year if you want the current year
 
+%---------------------------------------------------------
+% Document Start
+%---------------------------------------------------------
 \begin{document}
 
+%---------------------------------------------------------
+% Title Page
+%---------------------------------------------------------
 \thispagestyle{plain}
 \hypersetup{pageanchor=false}
+
 \begin{titlepage}
 \enlargethispage{4.0cm}
-\sffamily  % Serifenlose Grundschrift für die Titelseite einstellen
+\sffamily  % Serifenlose Grundschrift für die Titelseite
 
 \parbox{0.5\linewidth}{
-\begin{flushleft}
-% Hier ggf. ein Logo der Firma
-\end{flushleft}
+    \begin{flushleft}
+        % Optional: Insert a company logo here
+    \end{flushleft}
 }
 \parbox{0.5\linewidth}{
-\begin{flushright}
-    \includegraphics[width=0.4\linewidth]{images/DHBW_d_R_FN_46mm_4c}\\[5ex]
-\end{flushright}
+    \begin{flushright}
+        \includegraphics[width=0.4\linewidth]{images/DHBW_d_R_FN_46mm_4c}\\[5ex]
+    \end{flushright}
 }
 
 \begin{center}
 
 {\fontsize{20.74pt}{24pt}\selectfont
 \textbf{\titel}\\[1.5ex]}
+
 {\fontsize{14pt}{17pt}\selectfont
 \textbf{\untertitel}\\[5ex]}
+
 {\fontsize{17pt}{20pt}\selectfont
 \textbf{\arbeit}\\[2ex]}
+
 {\fontsize{14pt}{17pt}\selectfont
 Studiengang \studiengang\\[2ex]}
+
 {\fontsize{12pt}{14pt}\selectfont
 Studienrichtung \studienrichtung\\[1ex]
 Duale Hochschule Baden-Württemberg Ravensburg, Campus Friedrichshafen\\[5ex]
@@ -67,25 +109,29 @@ von\\[1ex]
 {\fontsize{12pt}{14pt}\selectfont
 \begin{tabular}{ll}
 Abgabedatum:                    & \quad \abgabe \\
-Bearbeitungszeitraum:           & \quad \bearbeitungszeitraum   \\ 
-Matrikelnummer:                 & \quad \matrikelnr \\ 
+Bearbeitungszeitraum:           & \quad \bearbeitungszeitraum \\
+Matrikelnummer:                 & \quad \matrikelnr \\
 Kurs:                           & \quad \kurs \\
 Dualer Partner:                 & \quad \firma \\ % entfällt bei Studienarbeit
-Betreuerin / Betreuer:          & \quad \betreuerfirma \\ % Betreuerin / Betreuer der Arbeit
-Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex] % Gutachterin / Gutachter der DHBW (nur bei der Bachelorarbeit erforderlich)
+Betreuerin / Betreuer:          & \quad \betreuerfirma \\ % Betreuer
+Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex]
 \end{tabular}
 }
 \end{center}
-%%%%% Nachfolgende Zeilen einkommentieren, wenn Copyrightvermerk gewünscht ist
-%\begin{flushleft}
-%{\fontsize{11pt}{13pt}\selectfont
-%Copyrightvermerk:\\
-%Dieses Werk einschließlich seiner Teile ist \textbf{urheberrechtlich geschützt}. Jede Verwertung außerhalb der engen Grenzen des Urheberrechtgesetzes ist ohne Zustimmung des Autors unzulässig und strafbar. Das gilt insbesondere für Vervielfältigungen, Übersetzungen, Mikroverfilmungen sowie die Einspeicherung und Verarbeitung in elektronischen Systemen.
-%}
-%\end{flushleft}
-%\begin{flushright}
-%{\fontsize{11pt}{13pt}\selectfont \copyright{} \jahr }
-%\end{flushright}
+
+% Uncomment if needed for copyright:
+% \begin{flushleft}
+% {\fontsize{11pt}{13pt}\selectfont
+% Copyrightvermerk:\\
+% Dieses Werk einschließlich seiner Teile ist \textbf{urheberrechtlich geschützt}.
+% Jede Verwertung außerhalb der engen Grenzen des Urheberrechtgesetzes 
+% ist ohne Zustimmung des Autors unzulässig und strafbar.
+% }
+% \end{flushleft}
+% \begin{flushright}
+% {\fontsize{11pt}{13pt}\selectfont \copyright{} \jahr }
+% \end{flushright}
+
 \end{titlepage}
 
 \ifthenelse{\boolean{@twoside}}{%
@@ -96,41 +142,40 @@ Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex] % Gutachterin / 
 
 \hypersetup{pageanchor=true}
 
-%% Ggf. folgende Zeile auskommentieren, falls der Sperrvermerk gewünscht ist.
-%\chapter*{Sperrvermerk} %*-Variante sorgt dafür, das der Sperrvermerk nicht im Inhaltsverzeichnis auftaucht
-%gemäß Ziffer 1.1.14 der Anlage 1 zu §§ 3, 4 und 5  der Studien- und Prüfungsordnung für die Bachelorstudiengänge im Studienbereich Technik der Dualen Hochschule Baden-Württemberg vom 29.09.2017 in der Fassung vom 24.07.2023:
-%
-%Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen Personen außerhalb des Prüfungsprozesses und des Evaluationsverfahrens zugänglich gemacht werden, sofern keine anders lautende Genehmigung vom Dualen Partner vorliegt.
-%
-%Musterstadt, den \today \\[4ex]
-%
-%\rule[-0.2cm]{5cm}{0.5pt} \\
-%
-%\textsc{\autor} \\[10ex]
+%---------------------------------------------------------
+% (Optional) Sperrvermerk
+%---------------------------------------------------------
+% \chapter*{Sperrvermerk}
+% ... text ...
 
-\chapter*{Erklärung} %*-Variante sorgt dafür, dass die Erklärung nicht im Inhaltsverzeichnis auftaucht
+%---------------------------------------------------------
+% Erklärung
+%---------------------------------------------------------
+\chapter*{Erklärung} % Nicht im Inhaltsverzeichnis auftauchen
 
-gemäß Ziffer 1.1.14 der Anlage 1 zu §§ 3, 4 und 5  der Studien- und Prüfungsordnung für die Bachelorstudiengänge im Studienbereich Technik der Dualen Hochschule Baden-Württemberg vom 29.09.2017 in der Fassung vom 24.07.2023.
+gemäß Ziffer 1.1.14 der Anlage 1 zu §§ 3, 4 und 5  
+der Studien- und Prüfungsordnung für die Bachelorstudiengänge im Studienbereich Technik  
+der Dualen Hochschule Baden-Württemberg vom 29.09.2017 in der Fassung vom 24.07.2023.
 
 Ich versichere hiermit, dass ich meine \arbeit\ mit dem Thema:
 
 \begin{quote}
-	\textit{\titel} % -\textit{ \untertitel }
+    \textit{\titel}
 \end{quote}
 
-selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.\\[6ex]
+selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.  
+Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.\\[6ex]
 
 Friedrichshafen, den \today \\[1ex]
-
 \rule[-0.2cm]{5cm}{0.5pt} \\
-
 \autor \\[10ex]
 
 \rmfamily
 
-\thispagestyle{empty}
-
-\chapter*{Kurzfassung} %*-Variante sorgt dafür, das Abstract nicht im Inhaltsverzeichnis auftaucht
+%---------------------------------------------------------
+% Kurzfassung
+%---------------------------------------------------------
+\chapter*{Kurzfassung} % Nicht im Inhaltsverzeichnis
 
 Problemstellung
 
@@ -142,54 +187,40 @@ Konkrete Ergebnisse der Arbeit, am besten mit quantitativen Angaben
 
 \clearpage
 
-\chapter*{Abstract} %*-Variante sorgt dafür, das Abstract nicht im Inhaltsverzeichnis auftaucht
+%---------------------------------------------------------
+% Abstract
+%---------------------------------------------------------
+\chapter*{Abstract} % Nicht im Inhaltsverzeichnis
 
-English translation of the ``Kurzfassung''.
+English translation of the “Kurzfassung”.
 
 \clearpage
 
-% Alle Abkürzungen, die in der Arbeit verwendet werden. Die Alphabetische Sortierung übernimmt Latex. Nachfolgend sind Beispiele genannt, welche nach Bedarf angepasst, gelöscht oder ergänzt werden können.
-% Die Angaben in der eckigen Klammer werden zur Sortierung der Einträge verwendet. Vor allem bei Formelzeichen hat man sonst das Problem, dass diese möglicherweise nicht wie gewünscht sortiert werden.
-
-% Bei den unten stehenden Formelzeichen ist erläutert, wie explizite Sortierschlüssel über den Inhalt der eckigen Klammer angegeben werden.
-
-% Zum Aktualisieren des Abkürzungsverzeichnisses (Nomenklatur) bitte auf der Kommandozeile folgenden Befehl aufrufen :
-% makeindex <Dateiname>.nlo -s nomencl.ist -o <Dateiname>.nls
-% Oder besser: Kann in TexStudio unter Tools-Benutzer als Shortlink angelegt werden
-% Konfiguration unter: Optionen-Erzeugen-Benutzerbefehle: makeindex -s nomencl.ist -t %.nlg -o %.nls %.nlo
-
- Allgemeine Abkürzungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\nomenclature[Abb]{Abb.}{Abbildung}
-%\nomenclature[bzw]{bzw.}{beziehungsweise}
-%\nomenclature[DHBW]{DHBW}{Duale Hochschule Baden-Württemberg}
-%\nomenclature[ebd]{ebd.}{ebenda}
-%\nomenclaturev[etal]{et al.}{at alii}
+%---------------------------------------------------------
+% Nomenclature / Abbreviations
+% (Requires running "makeindex main.nlo -s nomencl.ist -o main.nls")
+%---------------------------------------------------------
+% Uncomment or add your entries:
+% \nomenclature[Abb]{Abb.}{Abbildung}
+% \nomenclature[bzw]{bzw.}{beziehungsweise}
 \nomenclature[etc]{etc.}{et cetera}
-%\nomenclature[evtl]{evtl.}{eventuell}
 \nomenclature[f]{f.}{folgende Seite}
 \nomenclature[ff]{ff.}{fortfolgende Seiten}
-%\nomenclature[ggf]{ggf.}{gegebenenfalls}
-%\nomenclature[Hrsg]{Hrsg.}{Herausgeber}
-%\nomenclature[Tab]{Tab.}{Tabelle}
-%\nomenclature[ua]{u. a.}{unter anderem}
-%\nomenclature[usw]{usw.}{und so weiter}
 \nomenclature[vgl]{vgl.}{vergleiche}
 \nomenclature[zB]{z. B.}{zum Beispiel}
-%\nomenclaturev[zT]{z. T.}{zum Teil}
 
-% Dateiendungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File types
 \nomenclature[EMF]{EMF}{Enhanced Metafile}
 \nomenclature[JPG]{JPG}{Joint Photographic Experts Group}
 \nomenclature[KI]{KI}{Künstliche Intelligenz}
 \nomenclature[PDF]{PDF}{Portable Document Format}
 \nomenclature[PNG]{PNG}{Portable Network Graphics}
-%\nomenclature[]{XML}{Extensible Markup Language}
 
-% Abkürzungen von Fachbegriffen %%%%%%%%%%%%%%%%%%%%
+% Technical abbreviations
 \nomenclature[ABS]{ABS}{Antiblockiersystem}
 \nomenclature[ESC]{ESC}{Electronic Stability Control, Fahrdynamikregelung}
 
-% Formelzeichen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
 \nomenclature[a]{$a$}{Beschleunigung}
 \nomenclature[F]{$F$}{Kraft}
 \nomenclature[m]{$m$}{Masse}
@@ -197,109 +228,85 @@ English translation of the ``Kurzfassung''.
 \nomenclature[U]{$U$}{Spannung}
 \nomenclature[R]{$R$}{Widerstand}
 
+%---------------------------------------------------------
+% Main Chapters
+%---------------------------------------------------------
+\tableofcontents
+
 \chapter{Grundlagen}
 \label{cha:Grundlagen}
 
-Zielgerichtete theoretische Grundlagen, sowohl fachliche, wie auch methodische.
-
-Zu den Grundlagen gehören z.~B. auch Details zur Problemstellung, der Stand der Technik und weitere Grundlagen, welche zur Konzeptausarbeitung, Umsetzung und Verifikation erforderlich sind.
-
-Grundlagen haben immer einen Bezug zu den nachfolgenden Kapiteln. Diesen Bezug sollte man gelegentlich explizit herstellen, damit bereits in diesem Kapitel klar ist, wo und für was die Grundlagen gebraucht und angewandt werden.
+Zielgerichtete theoretische\cite{VIETH1999842} Grundlagen, sowohl fachliche, wie auch methodische.
 
 \chapter{Umsetzung und Ergebnisse}
 \label{cha:umsetzung}
 
-Je nach Art der Arbeit kann diese Kapitelüberschrift auch \glqq Ergebnisse\grqq~lauten, z.~B. bei rein messtechnischen Aufgaben.
+Beschreibung der Umsetzung des zuvor gewählten Vorgehens, 
+Verifikation anhand der Anforderungen etc.
 
-Beschreibung der Umsetzung des zuvor gewählten Vorgehens (theoretische Untersuchung, Erhebungen, Durchführung von Experimenten, Prototypenaufbau, Implementierung eines Prozesses, etc.).
-
-Verifikation anhand der zuvor erarbeiteten Anforderungen und Validierung in Bezug auf das zuvor gestellte Ziel. Diskussion der Ergebnisse. Spätestens hier auch auf die Zuverlässigkeit der gewonnenen Erkenntnisse eingehen (z.~B. anhand der Genauigkeit von Messergebnissen).
-
+%---------------------------------------------------------
+% Example of a KOMA-Script addchap (unnumbered in ToC)
+%---------------------------------------------------------
 \addchap{A Nutzung von Künstliche Intelligenz basierten Werkzeugen}
-\setcounter{chapter}{1}
 
-Im Rahmen dieser Arbeit wurden Künstliche Intelligenz (KI)\index{Künstliche Intelligenz} basierte Werkzeuge benutzt. Tabelle~\ref{tab:anhang_uebersicht_KI_werkzeuge} gibt eine Übersicht über die verwendeten Werkzeuge und den jeweiligen Einsatzzweck.
+Im Rahmen dieser Arbeit ...
 
-\begin{table}[hbt]    
+\begin{table}[hbt]
     \centering
-    \renewcommand{\arraystretch}{1.5}    % Skaliert die Zeilenhöhe der Tabelle
-    \captionabove[Liste der verwendeten Künstliche Intelligenz basierten Werkzeuge]{Liste der verwendeten KI basierten Werkzeuge}
+    \renewcommand{\arraystretch}{1.5}
+    \captionabove{Liste der verwendeten KI-basierten Werkzeuge}
     \label{tab:anhang_uebersicht_KI_werkzeuge}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.65\linewidth}}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}
+                    >{\raggedright\arraybackslash}p{0.65\linewidth}}
         \textbf{Werkzeug} & \textbf{Beschreibung der Nutzung}\\
-        \hline 
+        \hline \hline
+        ChatGPT &
+        \begin{itemize}[noitemsep,topsep=0pt]
+            \item Grundlagenrecherche …
+            \item Suche nach Herstellern …
+        \end{itemize} \\
+        ChatPDF &
+        \begin{itemize}[noitemsep,topsep=0pt]
+            \item Recherche und Zusammenfassung von Studien …
+        \end{itemize} \\
+        DeepL &
+        \begin{itemize}[noitemsep,topsep=0pt]
+            \item Übersetzung von …
+        \end{itemize} \\
+        Tabnine AI coding assistant &
+        \begin{itemize}[noitemsep,topsep=0pt]
+            \item Aktiviertes Plugin …
+        \end{itemize} \\
+        \ldots & \ldots \\
         \hline
-        ChatGPT &     \vspace{-\topsep}
-                    \begin{itemize}[noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt] 
-                        \item Grundlagenrecherche zu bekannten Prinzipien optischer Sensorik zur Abstandsmessung (siehe Abschnitt \ldots)
-                        \item Suche nach Herstellern von Lidar-Sensoren (siehe Abschnitt \ldots)
-                        \item \ldots
-                    \end{itemize} \\
-        ChatPDF &    \vspace{-\topsep}
-                    \begin{itemize}[noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt] 
-                    \item Recherche und Zusammenfassung von wissenschaftlichen Studien im Themenfeld \ldots
-                    \item \ldots
-                    \end{itemize} \\ 
-        DeepL    &    \vspace{-\topsep}
-                    \begin{itemize}[noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt] 
-                    \item Übersetzung des Papers von $[\ldots]$
-                    \end{itemize} \\ 
-        Tabnine AI coding assistant &    \vspace{-\topsep}
-                            \begin{itemize}[noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt] 
-                            \item Aktiviertes Plugin in MS Visual Studio zum Programmieren des \ldots
-                            \item \ldots
-                            \end{itemize} \\ 
-        \ldots    &    \vspace{-\topsep}
-                    \begin{itemize}[noitemsep,topsep=0pt,partopsep=0pt,parsep=0pt] 
-                    \item \ldots
-                    \end{itemize} \\ 
-        \hline 
-    \end{tabular} 
+    \end{tabular}
 \end{table}
 
+%---------------------------------------------------------
+% More Appendices, if needed
+%---------------------------------------------------------
 \addchap{B Ergänzungen}
-\setcounter{chapter}{2}
-
-\section{Details zu bestimmten theoretischen Grundlagen}
-
-\section{Weitere Details, welche im Hauptteil den Lesefluss behindern}
+% Additional info or sections ...
 
 \addchap{C Details zu Laboraufbauten und Messergebnissen}
-\setcounter{chapter}{3}
-\setcounter{section}{0}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-
-\section{Versuchsanordnung}
-
-\section{Liste der verwendeten Messgeräte}
-
-\section{Übersicht der Messergebnisse}
-
-\section{Schaltplan und Bild der Prototypenplatine}
+% Additional info ...
 
 \addchap{D Zusatzinformationen zu verwendeter Software}
-\setcounter{chapter}{4}
-\setcounter{section}{0}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-
-\section{Struktogramm des Programmentwurfs}
-
-\section{Wichtige Teile des Quellcodes}
+% Additional info ...
 
 \addchap{E Datenblätter}
-\setcounter{chapter}{5}
-\setcounter{section}{0}
-\setcounter{table}{0}
-\setcounter{figure}{0}
+% Additional info ...
 
-%\section{Einbinden von PDF-Seiten aus anderen Dokumenten}
-
-Auf den folgenden Seiten wird eine Möglichkeit gezeigt, wie aus einem anderen PDF-Dokument komplette Seiten übernommen werden können, z.~B. zum Einbindungen von Datenblättern. Der Nachteil dieser Methode besteht darin, dass sämtliche Formateinstellungen (Kopfzeilen, Seitenzahlen, Ränder, etc.) auf diesen Seiten nicht angezeigt werden. Die Methode wird deshalb eher selten gewählt. Immerhin sorgt das Package \textit{\glqq pdfpages\grqq}~für eine korrekte Seitenzahleinstellung auf den im Anschluss folgenden \glqq nativen\grqq~\LaTeX-Seiten.
-
-Eine bessere Alternative ist, einzelne Seiten mit \textit{\glqq$\backslash$includegraphics\grqq}~einzubinden.
-
+% Example of including PDF pages (pages 2-4)
 \includepdf[pages={2-4}]{docs/EingebundenesPDF.pdf}
+
+%---------------------------------------------------------
+% Bibliography
+%---------------------------------------------------------
+\begingroup
+\renewcommand{\bibfont}{\fontsize{13pt}{12pt}\selectfont}  % optionally larger font
+\sloppy
+\printbibliography
+\endgroup
 
 \end{document}
