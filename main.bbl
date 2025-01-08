@@ -16,50 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{VIETH1999842}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=4344c98b7c503d099a8d5d27593a76a8}{%
-           family={Vieth},
-           familyi={V\bibinitperiod},
-           given={Reinhold},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{fullhash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{fullhashraw}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{bibnamehash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{authorbibnamehash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{authornamehash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{authorfullhash}{4344c98b7c503d099a8d5d27593a76a8}
-      \strng{authorfullhashraw}{4344c98b7c503d099a8d5d27593a76a8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{ABSTRACT For adults, the 5-μg (200 IU) vitamin D recommended dietary allowance may prevent osteomalacia in the absence of sunlight, but more is needed to help prevent osteoporosis and secondary hyperparathyroidism. Other benefits of vitamin D supplementation are implicated epidemiologically: prevention of some cancers, osteoarthritis progression, multiple sclerosis, and hypertension. Total-body sun exposure easily provides the equivalent of 250 μg (10000 IU) vitamin D/d, suggesting that this is a physiologic limit. Sailors in US submarines are deprived of environmentally acquired vitamin D equivalent to 20–50 μg (800–2000 IU)/d. The assembled data from many vitamin D supplementation studies reveal a curve for vitamin D dose versus serum 25-hydroxyvitamin D [25(OH)D] response that is surprisingly flat up to 250 μg (10000 IU) vitamin D/d. To ensure that serum 25(OH)D concentrations exceed 100 nmol/L, a total vitamin D supply of 100 μg (4000 IU)/d is required. Except in those with conditions causing hypersensitivity, there is no evidence of adverse effects with serum 25(OH)D concentrations <140 nmol/L, which require a total vitamin D supply of 250 μg (10000 IU)/d to attain. Published cases of vitamin D toxicity with hypercalcemia, for which the 25(OH)D concentration and vitamin D dose are known, all involve intake of ≥1000 μg (40000 IU)/d. Because vitamin D is potentially toxic, intake of >25 μg (1000 IU)/d has been avoided even though the weight of evidence shows that the currently accepted, no observed adverse effect limit of 50 μg (2000 IU)/d is too low by at least 5-fold.}
-      \field{issn}{0002-9165}
-      \field{journaltitle}{The American Journal of Clinical Nutrition}
-      \field{number}{5}
-      \field{title}{Vitamin D supplementation, 25-hydroxyvitamin D concentrations, and safety*}
-      \field{volume}{69}
-      \field{year}{1999}
-      \field{pages}{842\bibrangedash 856}
-      \range{pages}{15}
-      \verb{doi}
-      \verb https://doi.org/10.1093/ajcn/69.5.842
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0002916522043763
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0002916522043763
-      \endverb
-      \keyw{Calciferol,calcidiol,cholecalciferol,calcitriol,vitamin D,25-hydroxyvitamin D,1,25-dihydroxyvitamin D,toxicity,safety,nutrition,environment,ultraviolet light,hyperparathyroidism,osteoporosis,osteomalacia,daily reference intake,25(OH)D,1,25(OH)D,no observed adverse effect level,NOAEL,LOAEL,lowest observed adverse effect level}
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

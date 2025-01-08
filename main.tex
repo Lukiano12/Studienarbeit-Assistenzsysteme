@@ -1,18 +1,18 @@
-\documentclass[openany]{scrbook} % KOMA-Script book class
+\documentclass[a4paper, 12pt]{article} % Artikel-Klasse
 
 %---------------------------------------------------------
 % Encoding, language, quotes
 %---------------------------------------------------------
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}       % German language & hyphenation
-\usepackage{csquotes}             % Recommended for quotes with babel/polyglossia
+\usepackage[ngerman]{babel}       % Deutsche Sprache und Silbentrennung
+\usepackage{csquotes}             % Für korrekte Anführungszeichen
 
 %---------------------------------------------------------
 % Graphics & PDF
 %---------------------------------------------------------
 \usepackage{graphicx}
-\usepackage{pdfpages}             % For including PDF pages
-\usepackage{caption}              % For \captionabove
+\usepackage{pdfpages}             % Einbinden von PDF-Seiten
+\usepackage{caption}              % Verbesserte Bildunterschriften
 \usepackage{subcaption}
 
 %---------------------------------------------------------
@@ -27,22 +27,23 @@
 %---------------------------------------------------------
 \usepackage{ifthen}
 \usepackage{acronym}
-\PassOptionsToPackage{hyphens}{url}% Tells url/hyperref to allow breaks at hyphens
+\PassOptionsToPackage{hyphens}{url} % URLs in Hyperlinks umbrechen
 \usepackage[breaklinks=true]{hyperref} 
-\usepackage{array}                % Better table formatting
-\usepackage{enumitem}             % Control over itemize environment
+\usepackage{array}                % Bessere Tabellenformatierung
+\usepackage{enumitem}             % Kontrolle über Listen-Layouts
 \usepackage{nomencl}
+\usepackage{scrlayer-scrpage}     % Header und Footer
 
 %---------------------------------------------------------
-% Bibliography (biblatex with Biber)
+% Bibliography (biblatex mit Biber)
 %---------------------------------------------------------
 \usepackage[backend=biber, style=ieee]{biblatex}  
 \addbibresource{literatur.bib}  
 
 %---------------------------------------------------------
-% Custom placeholders
+% Platzhalter
 %---------------------------------------------------------
-\newcommand{\titel}{Analyse und Implementierung eines mobilen Warnsystems zur Minimierung von Abbiegeunfällen zwischen Lkw und Fußgänger:innen}
+\newcommand{\titel}{Entwicklung eines mobilen Warnsystems zur Minimierung von Abbiegeunfällen zwischen LKW und Fußgänger:innen}
 \newcommand{\untertitel}{}
 \newcommand{\arbeit}{Studienarbeit T3100}
 \newcommand{\studiengang}{Elektrotechnik}
@@ -51,32 +52,60 @@
 \newcommand{\abgabe}{13.01.2025}
 \newcommand{\bearbeitungszeitraum}{09.10.2024 - 13.01.2025}
 \newcommand{\matrikelnr}{5726700}
-\newcommand{\kurs}{TFE22-1, TFE22-2}
+\newcommand{\kurs}{TFE22-1}
 \newcommand{\firma}{}
 \newcommand{\betreuerfirma}{Prof. Dr. Ing. Tobias Frank}
 \newcommand{\gutachterdhbw}{Prof. Dr. Ing. Tobias Frank}
-\newcommand{\jahr}{2025} % or \the\year if you want the current year
-
-%testing
+\newcommand{\jahr}{2025}
 
 %---------------------------------------------------------
-% Document Start
+% Header und Footer mit Linien
+%---------------------------------------------------------
+\clearpairofpagestyles         % Standard-Stile löschen
+
+% Header with Logo Above the Line
+\ohead{%
+    \includegraphics[width=3cm]{images/DHBW_d_R_FN_46mm_4c}\\[1ex] % Logo above the line
+    \rule[0.5\baselineskip]{\textwidth}{0.4pt} % Horizontal line below logo
+}
+
+
+% Footer with Line and Proper Alignment
+\ifoot{%
+    \rule[0.5\baselineskip]{\textwidth}{0.4pt}\\[1ex] % Horizontal line above footer
+    \arbeit % Left-aligned title
+}
+\cfoot{%
+    \rule[0.5\baselineskip]{\textwidth}{0.4pt}\\[1ex] % Line above center footer
+    \autor % Center-aligned author name
+}
+\ofoot{%
+    \rule[0.5\baselineskip]{\textwidth}{0.4pt}\\[1ex] % Line above right footer
+    \thepage % Right-aligned page number
+}
+
+
+
+\pagestyle{scrheadings}        % Stil aktivieren
+
+%---------------------------------------------------------
+% Dokumentbeginn
 %---------------------------------------------------------
 \begin{document}
 
 %---------------------------------------------------------
-% Title Page
+% Titelseite
 %---------------------------------------------------------
-\thispagestyle{plain}
+\thispagestyle{empty}  % Kein Header oder Footer auf der Titelseite
 \hypersetup{pageanchor=false}
 
 \begin{titlepage}
 \enlargethispage{4.0cm}
-\sffamily  % Serifenlose Grundschrift für die Titelseite
+\sffamily  % Serifenlose Schrift für die Titelseite
 
 \parbox{0.5\linewidth}{
     \begin{flushleft}
-        % Optional: Insert a company logo here
+        % Optional: Firmenlogo
     \end{flushleft}
 }
 \parbox{0.5\linewidth}{
@@ -89,9 +118,6 @@
 
 {\fontsize{20.74pt}{24pt}\selectfont
 \textbf{\titel}\\[1.5ex]}
-
-{\fontsize{14pt}{17pt}\selectfont
-\textbf{\untertitel}\\[5ex]}
 
 {\fontsize{17pt}{20pt}\selectfont
 \textbf{\arbeit}\\[2ex]}
@@ -110,48 +136,28 @@ von\\[1ex]
 \begin{center}
 {\fontsize{12pt}{14pt}\selectfont
 \begin{tabular}{ll}
-Abgabedatum:                    & \quad \abgabe \\
-Bearbeitungszeitraum:           & \quad \bearbeitungszeitraum \\
-Matrikelnummer:                 & \quad \matrikelnr \\
-Kurs:                           & \quad \kurs \\
+Abgabedatum:                    & \quad \abgabe \\  
+Bearbeitungszeitraum:           & \quad \bearbeitungszeitraum \\  
+Matrikelnummer:                 & \quad \matrikelnr \\  
+Kurs:                           & \quad \kurs \\  
 Dualer Partner:                 & \quad \firma \\ % entfällt bei Studienarbeit
-Betreuerin / Betreuer:          & \quad \betreuerfirma \\ % Betreuer
+Betreuerin / Betreuer:          & \quad \betreuerfirma \\  
 Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex]
 \end{tabular}
 }
 \end{center}
 
-% Uncomment if needed for copyright:
-% \begin{flushleft}
-% {\fontsize{11pt}{13pt}\selectfont
-% Copyrightvermerk:\\
-% Dieses Werk einschließlich seiner Teile ist \textbf{urheberrechtlich geschützt}.
-% Jede Verwertung außerhalb der engen Grenzen des Urheberrechtgesetzes 
-% ist ohne Zustimmung des Autors unzulässig und strafbar.
-% }
-% \end{flushleft}
-% \begin{flushright}
-% {\fontsize{11pt}{13pt}\selectfont \copyright{} \jahr }
-% \end{flushright}
-
 \end{titlepage}
 
-\hypersetup{pageanchor=true}
+\clearpage
 
-%---------------------------------------------------------
-% (Optional) Sperrvermerk
-%---------------------------------------------------------
-% \chapter*{Sperrvermerk}
-% ... text ...
+\pagestyle{scrheadings}  % Header und Footer nach Titelseite aktivieren
+\hypersetup{pageanchor=true}
 
 %---------------------------------------------------------
 % Erklärung
 %---------------------------------------------------------
-\chapter*{Erklärung} % Nicht im Inhaltsverzeichnis auftauchen
-
-gemäß Ziffer 1.1.14 der Anlage 1 zu §§ 3, 4 und 5  
-der Studien- und Prüfungsordnung für die Bachelorstudiengänge im Studienbereich Technik  
-der Dualen Hochschule Baden-Württemberg vom 29.09.2017 in der Fassung vom 24.07.2023.
+\section*{Erklärung}
 
 Ich versichere hiermit, dass ich meine \arbeit\ mit dem Thema:
 
@@ -163,144 +169,43 @@ selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsm
 Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.\\[6ex]
 
 Friedrichshafen, den \today \\[1ex]
-\rule[-0.2cm]{5cm}{0.5pt} \\
+\rule[-0.2cm]{5cm}{0.5pt} \\  
 \autor \\[10ex]
 
 \rmfamily
 
-%---------------------------------------------------------
-% Kurzfassung
-%---------------------------------------------------------
-\chapter*{Kurzfassung} % Nicht im Inhaltsverzeichnis
-
-Problemstellung
-
-Ziel der Arbeit
-
-Vorgehen und angewandte Methoden
-
-Konkrete Ergebnisse der Arbeit, am besten mit quantitativen Angaben
-
 \clearpage
-
 %---------------------------------------------------------
 % Abstract
 %---------------------------------------------------------
-\chapter*{Abstract} % Nicht im Inhaltsverzeichnis
-
+\section*{Abstract}
 English translation of the “Kurzfassung”.
 
 \clearpage
 
 %---------------------------------------------------------
-% Nomenclature / Abbreviations
-% (Requires running "makeindex main.nlo -s nomencl.ist -o main.nls")
-%---------------------------------------------------------
-% Uncomment or add your entries:
-% \nomenclature[Abb]{Abb.}{Abbildung}
-% \nomenclature[bzw]{bzw.}{beziehungsweise}
-\nomenclature[etc]{etc.}{et cetera}
-\nomenclature[f]{f.}{folgende Seite}
-\nomenclature[ff]{ff.}{fortfolgende Seiten}
-\nomenclature[vgl]{vgl.}{vergleiche}
-\nomenclature[zB]{z. B.}{zum Beispiel}
-
-% File types
-\nomenclature[EMF]{EMF}{Enhanced Metafile}
-\nomenclature[JPG]{JPG}{Joint Photographic Experts Group}
-\nomenclature[KI]{KI}{Künstliche Intelligenz}
-\nomenclature[PDF]{PDF}{Portable Document Format}
-\nomenclature[PNG]{PNG}{Portable Network Graphics}
-
-% Technical abbreviations
-\nomenclature[ABS]{ABS}{Antiblockiersystem}
-\nomenclature[ESC]{ESC}{Electronic Stability Control, Fahrdynamikregelung}
-
-% Symbols
-\nomenclature[a]{$a$}{Beschleunigung}
-\nomenclature[F]{$F$}{Kraft}
-\nomenclature[m]{$m$}{Masse}
-\nomenclature[P]{$P$}{Leistung}
-\nomenclature[U]{$U$}{Spannung}
-\nomenclature[R]{$R$}{Widerstand}
-
-%---------------------------------------------------------
-% Main Chapters
+% Inhaltsverzeichnis
 %---------------------------------------------------------
 \tableofcontents
 
-\chapter{Grundlagen}
-\label{cha:Grundlagen}
-
-Zielgerichtete theoretische\cite{VIETH1999842} Grundlagen, sowohl fachliche, wie auch methodische.
-
-\chapter{Umsetzung und Ergebnisse}
-\label{cha:umsetzung}
-
-Beschreibung der Umsetzung des zuvor gewählten Vorgehens, 
-Verifikation anhand der Anforderungen etc.
+\clearpage
 
 %---------------------------------------------------------
-% Example of a KOMA-Script addchap (unnumbered in ToC)
+% Hauptkapitel
 %---------------------------------------------------------
-\addchap{A Nutzung von Künstliche Intelligenz basierten Werkzeugen}
+\section{Grundlagen}
+Zielgerichtete theoretische Grundlagen.
 
-Im Rahmen dieser Arbeit ...
+\clearpage
 
-\begin{table}[hbt]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \captionabove{Liste der verwendeten KI-basierten Werkzeuge}
-    \label{tab:anhang_uebersicht_KI_werkzeuge}
-    \begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}
-                    >{\raggedright\arraybackslash}p{0.65\linewidth}}
-        \textbf{Werkzeug} & \textbf{Beschreibung der Nutzung}\\
-        \hline \hline
-        ChatGPT &
-        \begin{itemize}[noitemsep,topsep=0pt]
-            \item Grundlagenrecherche …
-            \item Suche nach Herstellern …
-        \end{itemize} \\
-        ChatPDF &
-        \begin{itemize}[noitemsep,topsep=0pt]
-            \item Recherche und Zusammenfassung von Studien …
-        \end{itemize} \\
-        DeepL &
-        \begin{itemize}[noitemsep,topsep=0pt]
-            \item Übersetzung von …
-        \end{itemize} \\
-        Tabnine AI coding assistant &
-        \begin{itemize}[noitemsep,topsep=0pt]
-            \item Aktiviertes Plugin …
-        \end{itemize} \\
-        \ldots & \ldots \\
-        \hline
-    \end{tabular}
-\end{table}
+\section{Umsetzung und Ergebnisse}
+Beschreibung der Umsetzung und Verifikation.
 
 %---------------------------------------------------------
-% More Appendices, if needed
-%---------------------------------------------------------
-\addchap{B Ergänzungen}
-% Additional info or sections ...
-
-\addchap{C Details zu Laboraufbauten und Messergebnissen}
-% Additional info ...
-
-\addchap{D Zusatzinformationen zu verwendeter Software}
-% Additional info ...
-
-\addchap{E Datenblätter}
-% Additional info ...
-
-% Example of including PDF pages (pages 2-4)
-\includepdf[pages={2-4}]{docs/EingebundenesPDF.pdf}
-
-%---------------------------------------------------------
-% Bibliography
+% Bibliografie
 %---------------------------------------------------------
 \begingroup
-\renewcommand{\bibfont}{\fontsize{13pt}{12pt}\selectfont}  % optionally larger font
+\renewcommand{\bibfont}{\fontsize{13pt}{12pt}\selectfont}  
 \sloppy
 \printbibliography
 \endgroup
