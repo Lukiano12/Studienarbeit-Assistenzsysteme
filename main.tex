@@ -1,4 +1,4 @@
-\documentclass{scrbook} % KOMA-Script book class
+\documentclass[openany]{scrbook} % KOMA-Script book class
 
 %---------------------------------------------------------
 % Encoding, language, quotes
@@ -133,12 +133,6 @@ Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex]
 % \end{flushright}
 
 \end{titlepage}
-
-\ifthenelse{\boolean{@twoside}}{%
-    \cleardoublepage
-}{%
-    \clearpage
-}%
 
 \hypersetup{pageanchor=true}
 

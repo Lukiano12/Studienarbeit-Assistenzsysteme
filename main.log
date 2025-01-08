@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.7)  7 JAN 2025 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.7)  8 JAN 2025 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -33,6 +33,12 @@ Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `toc' on input line 137.
+Class scrbook Info: You've used standard option `openany'.
+(scrbook)           This is correct!
+(scrbook)           Internally I'm using `open=any'.
+(scrbook)           If you'd like to set the option with \KOMAoptions,
+(scrbook)           you'd have to use `open=any' there
+(scrbook)           instead of `openany', too.
 Class scrbook Info: File `scrsize11pt.clo' used instead of
 (scrbook)           file `scrsize11.clo' to setup font sizes on input line 2716.
  (C:\Users\lnztadil\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt.clo
@@ -1185,46 +1191,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 {C:/Users/lnztadil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/DHBW_d_R_FN_46mm_4c.jpg>]
+Package hyperref Info: Option `pageanchor' set `true' on input line 137.
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
+
+ []
+
+
 
 [2
 
-
 ]
-Package hyperref Info: Option `pageanchor' set `true' on input line 143.
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--172
-
- []
-
-
 
 [3
-
 
 ]
 
 [4
-
-
-]
-
-[5]
-
-[6
-
-
-
-]
-
-[7]
-
-[8
-
 
 
 ] (main.toc)
@@ -1233,193 +1221,174 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--172
 
 
 
-[9]
-
-[10
+[5
 
 
 ]
 chapter 1.
 
 
-[11]
-
-[12
-
+[6
 
 ]
 chapter 2.
 
 
-[13]
-
-[14
-
+[7
 
 ]
 chapter without number
 
-Overfull \hbox (3.08594pt too wide) in paragraph at lines 259--283
+Overfull \hbox (3.08594pt too wide) in paragraph at lines 253--277
  [][] 
  []
 
 
 
-[15]
-
-[16
-
+[8
 
 ]
 chapter without number
 
 
-[17]
-
-[18
-
+[9
 
 ]
 chapter without number
 
 
-[19]
-
-[20
-
+[10
 
 ]
 chapter without number
 
 
-[21]
-
-[22
-
+[11
 
 ]
 chapter without number
-<docs/EingebundenesPDF.pdf, id=121, 597.55246pt x 845.07718pt>
+<docs/EingebundenesPDF.pdf, id=76, 597.55246pt x 845.07718pt>
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf  used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf  used on input line 295.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf  used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf  used on input line 295.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<docs/EingebundenesPDF.pdf, id=124, page=2, 597.55246pt x 845.07718pt>
+<docs/EingebundenesPDF.pdf, id=79, page=2, 597.55246pt x 845.07718pt>
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 2>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 295.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 2>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
-[23]
+[12
+
+]
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 2>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 2>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 2>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page2 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[24
+[13
 
  <./docs/EingebundenesPDF.pdf>]
-<docs/EingebundenesPDF.pdf, id=144, page=3, 597.55246pt x 845.07718pt>
+<docs/EingebundenesPDF.pdf, id=100, page=3, 597.55246pt x 845.07718pt>
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 3>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 3>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 3>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page3 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[25
+[14
 
  <./docs/EingebundenesPDF.pdf>]
-<docs/EingebundenesPDF.pdf, id=150, page=4, 597.55246pt x 845.07718pt>
+<docs/EingebundenesPDF.pdf, id=105, page=4, 597.55246pt x 845.07718pt>
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 4>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 4>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 
 File: docs/EingebundenesPDF.pdf Graphic file (type pdf)
 <use docs/EingebundenesPDF.pdf, page 4>
-Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 301.
+Package pdftex.def Info: docs/EingebundenesPDF.pdf , page4 used on input line 295.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[26
+[15
 
  <./docs/EingebundenesPDF.pdf>]
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/sc' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 309.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 303.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 309.
+(Font)              size <6> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 309.
+(Font)              size <6> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 309.
+(Font)              size <12> substituted on input line 303.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 309.
+(Font)              size <6> substituted on input line 303.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <13> on input line 309.
+(Font)              <13> on input line 303.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.09996> on input line 309.
+(Font)              <9.09996> on input line 303.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.5> on input line 309.
+(Font)              <6.5> on input line 303.
 
 
-[27
-
+[16
 
 ] (main.aux)
  ***********
@@ -1438,17 +1407,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30835 strings out of 473576
- 624271 string characters out of 5714857
- 1557174 words of memory out of 5000000
- 53639 multiletter control sequences out of 15000+600000
+ 30827 strings out of 473576
+ 624234 string characters out of 5714857
+ 1557222 words of memory out of 5000000
+ 53641 multiletter control sequences out of 15000+600000
  567152 words of font info for 66 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,17n,107p,10933b,2475s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\lnztadil\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (27 pages, 227290 bytes).
+Output written on main.pdf (16 pages, 222705 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 
