@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.9)  9 JAN 2025 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.9)  9 JAN 2025 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1090,7 +1090,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 114.
-<images/DHBW_d_R_FN_46mm_4c.jpg, id=55, 133.33815pt x 73.7154pt>
+<images/DHBW_d_R_FN_46mm_4c.jpg, id=51, 133.33815pt x 73.7154pt>
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
 Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 119.
@@ -1167,23 +1167,23 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 203.
 [4
 
 ]
-
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 208.
-(pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
-[5
-
-]
-File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
-<use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 217.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 214.
 (pdftex.def)             Requested size: 195.0pt x 107.81252pt.
 
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 225.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 222.
+(pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
+[5
+
+]
+
+File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
+<use images/DHBW_d_R_FN_46mm_4c.jpg>
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 233.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [6
 
@@ -1191,7 +1191,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 225.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 236.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 244.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [7
 
@@ -1199,7 +1199,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 236.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 247.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 255.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [8
 
@@ -1207,7 +1207,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 247.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 258.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 266.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [9
 
@@ -1215,7 +1215,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 258.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 269.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 277.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [10
 
@@ -1223,7 +1223,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 269.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 280.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 289.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [11
 
@@ -1231,7 +1231,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 280.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 292.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 300.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [12
 
@@ -1239,7 +1239,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 292.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 303.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 311.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [13
 
@@ -1247,7 +1247,7 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 303.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 314.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 322.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [14
 
@@ -1255,69 +1255,61 @@ Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 314.
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 325.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 333.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
 [15
 
 ]
 
-File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
-<use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 336.
-(pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
-[16
-
-]
-
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/sc' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 343.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 340.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 343.
+(Font)              size <6> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 343.
+(Font)              size <6> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 343.
+(Font)              size <12> substituted on input line 340.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 343.
+(Font)              size <6> substituted on input line 340.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <13> on input line 343.
+(Font)              <13> on input line 340.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.09996> on input line 343.
+(Font)              <9.09996> on input line 340.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.5> on input line 343.
+(Font)              <6.5> on input line 340.
 
 
 File: images/DHBW_d_R_FN_46mm_4c.jpg Graphic file (type jpg)
 <use images/DHBW_d_R_FN_46mm_4c.jpg>
-Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 346.
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.jpg  used on input line 343.
 (pdftex.def)             Requested size: 85.35826pt x 47.19005pt.
-[17
+[16
 
 ] (main.aux)
  ***********
@@ -1330,23 +1322,23 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F4AC947F023280AEEA703D1CD072D84B;1459.
+(rerunfilecheck)             Checksum: 4BC102D339C158671775777C1A58F223;1288.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29722 strings out of 473576
- 609643 string characters out of 5714857
- 1471805 words of memory out of 5000000
- 52532 multiletter control sequences out of 15000+600000
+ 29719 strings out of 473576
+ 609614 string characters out of 5714857
+ 1470805 words of memory out of 5000000
+ 52531 multiletter control sequences out of 15000+600000
  566218 words of font info for 63 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,23n,107p,1758b,2477s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (18 pages, 162174 bytes).
+Output written on main.pdf (17 pages, 159553 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
