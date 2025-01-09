@@ -22,6 +22,9 @@
 \usepackage{setspace}
 \usepackage{textgreek}
 
+% Add float package for "H" float option
+\usepackage{float}
+
 %---------------------------------------------------------
 % Other packages
 %---------------------------------------------------------
@@ -33,6 +36,10 @@
 \usepackage{enumitem}             % Kontrolle über Listen-Layouts
 \usepackage{nomencl}
 \usepackage{scrlayer-scrpage}     % Header und Footer
+
+% Adjust header and footer heights
+\setlength{\headheight}{14.5pt}
+\setlength{\footheight}{34.16666pt}
 
 %---------------------------------------------------------
 % Bibliography (biblatex mit Biber)
@@ -69,7 +76,6 @@
     \rule[0.5\baselineskip]{\textwidth}{0.4pt} % Horizontal line below logo
 }
 
-
 % Footer with Line and Proper Alignment
 \ifoot{%
     \rule[0.5\baselineskip]{\textwidth}{0.4pt}\\[1ex] % Horizontal line above footer
@@ -83,8 +89,6 @@
     \rule[0.5\baselineskip]{\textwidth}{0.4pt}\\[1ex] % Line above right footer
     \thepage % Right-aligned page number
 }
-
-
 
 \pagestyle{scrheadings}        % Stil aktivieren
 
@@ -194,13 +198,141 @@ English translation of the “Kurzfassung”.
 % Hauptkapitel
 %---------------------------------------------------------
 \section{Grundlagen}
-Zielgerichtete theoretische Grundlagen.
+Zielgerichtete theoretische \cite{VIETH1999842}Grundlagen.
 
 \clearpage
 
 \section{Umsetzung und Ergebnisse}
 Beschreibung der Umsetzung und Verifikation.
 
+\clearpage
+
+\section{Einleitung}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\linewidth]{images/DHBW_d_R_FN_46mm_4c.jpg}\\[1ex] 
+    \centering
+    \caption{}
+    \label{ABBILDUNG 1}
+\end{figure}
+
+\end{spacing}
+
+\clearpage
+
+\section{Stand der Technik}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Idee}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\subsection{Fahrradhelm}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Konzept}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Anforderungen und Zielgruppe}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Bluetooth}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Entwicklung der App}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Eigenschaften}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Problematik}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
+
+\section{Aussicht}
+
+
+\begin{spacing}{1.8}  % Adjust line spacing
+\fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+
+\end{spacing}
+
+\clearpage
 %---------------------------------------------------------
 % Bibliografie
 %---------------------------------------------------------
