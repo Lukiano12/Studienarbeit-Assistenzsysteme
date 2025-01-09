@@ -59,6 +59,36 @@
       \endverb
       \keyw{Calciferol,calcidiol,cholecalciferol,calcitriol,vitamin D,25-hydroxyvitamin D,1,25-dihydroxyvitamin D,toxicity,safety,nutrition,environment,ultraviolet light,hyperparathyroidism,osteoporosis,osteomalacia,daily reference intake,25(OH)D,1,25(OH)D,no observed adverse effect level,NOAEL,LOAEL,lowest observed adverse effect level}
     \endentry
+    \entry{wikipedia_bluetooth}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e2ceeea38f8620383cfbd3e99c5c0cd8}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{fullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{bibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorbibnamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authornamehash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhash}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \strng{authorfullhashraw}{e2ceeea38f8620383cfbd3e99c5c0cd8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-01-09}
+      \field{title}{Bluetooth}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Bluetooth
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Bluetooth
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
