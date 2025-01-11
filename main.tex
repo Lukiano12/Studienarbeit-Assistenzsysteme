@@ -187,6 +187,13 @@ English translation of the “Kurzfassung”.
 
 \clearpage
 
+% List of figures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}  % Add section to table of contents
+\listoffigures
+
+\clearpage
+
+
 %---------------------------------------------------------
 % Inhaltsverzeichnis
 %---------------------------------------------------------
@@ -197,29 +204,75 @@ English translation of the “Kurzfassung”.
 %---------------------------------------------------------
 % Hauptkapitel
 %---------------------------------------------------------
-\section{Grundlagen}
-Zielgerichtete theoretische \cite{VIETH1999842}Grundlagen.
-
-\clearpage
 
 \section{Einleitung}
 \begin{spacing}{1.8}  % Adjust line spacing
     \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 
-    
+\end{spacing}
 
+    \subsection{Motivation}
+\begin{spacing}{1.8}  % Adjust line spacing
+    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 
+    In den letzten Jahren ist die Zahl der tödlichen Verkehrsunfälle bedauerlicherweise
+     gestiegen, was auf eine Vielzahl von Faktoren wie steigende
+      Verkehrsdichte sowie mangelnde Aufmerksamkeit und Sorgfalt
+       im Straßenverkehr zurückzuführen sein kann. Um dieser
+        negativen Entwicklung entgegenzuwirken,
+         wurden unterschiedliche Maßnahmen ergriffen. 
+         Neben strengeren Sicherheitsgesetzen haben sich vor 
+         allem technologische Innovationen wie Fahrzeugkameras, Sensorik und verschiedene Fahrerassistenzsysteme als wesentliche
+          Instrumente zur Unfallprävention herauskristallisiert.
 
-\begin{figure}[H]
-    \includegraphics[width=0.5\linewidth]{images/DHBW_d_R_FN_46mm_4c.jpg}\\[1ex] 
-    \centering
-    \caption{}
-    \label{ABBILDUNG 1}
-\end{figure}
+        
 
+Eine besonders bedeutende Neuerung im Bereich 
+der Lkw-Sicherheit stellen Abbiegeassistenten dar.
+ Diese Systeme helfen, den toten Winkel zu reduzieren und somit
+  Unfälle – insbesondere beim Rechtsabbiegen – zu vermeiden. Trotz dieser technischen Fortschritte besteht 
+  weiterhin Potenzial für weitere Verbesserungen. Eine umfassende Forschung und Entwicklung im Bereich von Fahrerassistenzsystemen könnte zukünftig dazu beitragen, 
+  das allgemeine Verkehrsrisiko weiter zu senken und die Verkehrssicherheit signifikant zu erhöhen \cite{grunder_simon_2024}.
 \end{spacing}
 
 \clearpage
+
+\subsection{Zielsetzung}
+\begin{spacing}{1.8}  % Adjust line spacing
+    \fontsize{14pt}{15pt}\selectfont
+
+    Die vorliegende Studienarbeit baut auf den Ergebnissen von C.
+     Gründer und J. Simon\cite{grunder_simon_2024} sowie von A. D. Gardy\cite{gardy_andy_2023} auf.
+      In der Arbeit von Gründer und Simon wurde ein Prototyp für ein Lkw-Abbiegeassistenzsystem entwickelt, das die Position von Fahrradfahrenden mithilfe von Bluetooth erfasst. Gardy [7] wiederum realisierte 
+      eine winkelbasierte Bluetooth-Ortung über einen intelligenten Fahrradhelm, der als 
+      Signal-Emitter fungierte. Dadurch können kritische Situationen beim Abbiegen erkannt und 
+      frühzeitig Warnungen ausgegeben werden.
+
+Ziel dieser Arbeit ist es, das in \cite{grunder_simon_2024} und \cite{gardy_andy_2023} skizzierte Konzept der Bluetooth-basierten 
+Positionsbestimmung auf eine breitere Anwendungsebene zu heben. Statt wie bisher die 
+Funktionalität auf einen speziellen Fahrradhelm zu beschränken, soll eine mobile Applikation 
+entwickelt werden, die für sämtliche Verkehrsteilnehmende zugänglich ist. Diese App übernimmt
+ die Rolle des Signal-Emitters und ermöglicht somit eine weitaus flexiblere und 
+ kostengünstigere Implementierung. Durch die Einbindung in gängige mobile Endgeräte soll sich 
+ die Technologie auch für
+ Fußgänger*innen oder Personen, die kein spezielles Helmsystem 
+ verwenden, eignen.
+
+Darüber hinaus sollen Optimierungen in den Bereichen Datenverarbeitung und -auswertung vorgenommen werden, um eine noch präzisere Positionsbestimmung zu erreichen und Fehlalarme zu reduzieren. Hierbei wird weiterhin auf die vorhandene Hardware-Infrastruktur, wie das XPLR-AOA Explorer Kit von u-blox, zurückgegriffen, allerdings mit dem Fokus auf eine verbesserte Software-Architektur und benutzerfreundliche Anwendungsentwicklung. 
+
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{images/XPLR-AOA-with-C209-and-C211-02_0}\\[1ex]
+    \centering
+    \caption{XPLR-AOA Explorer Kit \cite{u_blox_xplr_aoa2_kit}}
+    \label{ABBILDUNG 76}
+\end{figure}
+
+Das übergeordnete Ziel ist es, die Verkehrssicherheit insbesondere beim Abbiegen von Lkw signifikant zu erhöhen und dadurch Unfallzahlen zu reduzieren.
+
+\end{spacing}
+
+
+
 
 \section{Stand der Technik}
 
