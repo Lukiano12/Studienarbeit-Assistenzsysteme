@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1736773898.47161 "main.bcf" "main.bbl" "main" 1736773911.29675 0
-  "literatur.bib" 1736760757 5743 a912f68260b11ed1c570e8a4e3f93a0a ""
-  "main.bcf" 1736773909 108928 1d9e30c148eef3c1e23c9cd6e9c733b5 "pdflatex"
+["biber main"] 1736777321.42863 "main.bcf" "main.bbl" "main" 1736777382.49142 0
+  "literatur.bib" 1736777267 6647 9ab161acabc0026220c98e808db4620c ""
+  "main.bcf" 1736777378 109256 404f4b78fa02704f8e6258c17eb70698 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1736773906.08214 "g:/Studienarbeit-Assistenzsysteme/main.tex" "main.pdf" "main" 1736773911.30303 0
+["pdflatex"] 1736777354.68563 "g:/Studienarbeit-Assistenzsysteme/main.tex" "main.pdf" "main" 1736777382.79285 0
   "C:/Users/lnztadil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1736764032 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/lnztadil/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1736418097 11995304 639aba1e8c212e3b0ab6a8aed7b309d5 ""
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -161,20 +161,22 @@
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729261622 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/lnztadil/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693732032 123 a302f2c651a95033260db60e51527ae8 ""
-  "g:/Studienarbeit-Assistenzsysteme/main.tex" 1736773875 49906 fbda4e238a1d6985f3489f846161d3e2 ""
+  "g:/Studienarbeit-Assistenzsysteme/main.tex" 1736777267 50855 83f0b8f91344b4fb58bbb056db944998 ""
+  "images/2025-01-13_15h05_23.png" 1736777123 1082505 9aff5a00dbb7f8e1cac0c290a088083b ""
   "images/DHBW_d_R_FN_46mm_4c.jpg" 1736232917 17946 50287553cf5cb047b6c145a2811653f1 ""
   "images/Screenshot_20250113_094506_Bluetooth App.jpg" 1736765501 100261 73aa7b2a299883b3478c8ccbd0d34a22 ""
   "images/Screenshot_20250113_094518_Settings.jpg" 1736773404 133782 17c61067e3506389a6e8aeb6e94d9131 ""
   "images/Screenshot_20250113_094600_Bluetooth App.jpg" 1736773472 122165 ad5bf3660e0ac502c9de5156d4b6351f ""
   "images/Screenshot_20250113_094628_Bluetooth App.jpg" 1736773434 113366 8356aab38f52a787d9fec12b49371d5a ""
   "images/XPLR-AOA-with-C209-and-C211-02_0.png" 1736749377 234459 c232287b511ce2bbb6ac0b629b48e895 ""
-  "main.aux" 1736773909 7316 cd0489e9059e77b356890916d4677ad1 "pdflatex"
-  "main.bbl" 1736773900 17651 253f0f0a4b3a4e8289a01012c45b4799 "biber main"
-  "main.lof" 1736773909 924 8bffcc679e46645c5fdd6dad305d8f89 "pdflatex"
-  "main.out" 1736773909 3501 ecf79ecb863bb37e24b3db8277d7d1c7 "pdflatex"
-  "main.run.xml" 1736773909 2431 c5bf256f8e4580f023f9de0aa9eb28e2 "pdflatex"
-  "main.tex" 1736773875 49906 fbda4e238a1d6985f3489f846161d3e2 ""
-  "main.toc" 1736773909 1915 33062da8fff72bc0161060a9181bebc6 "pdflatex"
+  "images/abbiegeassistent-scaled-7b2478b8.jpeg" 1736774985 219018 7c4658d95bdde44246d89d853cd487b6 ""
+  "main.aux" 1736777378 8773 bc5bb3158eed5ae2938219dd5b37b574 "pdflatex"
+  "main.bbl" 1736777326 21451 e2810ad4cf08707c1616ad1ba55eb7f7 "biber main"
+  "main.lof" 1736777378 1342 d1a327cf1aaf610794059e3e9bf1b884 "pdflatex"
+  "main.out" 1736777378 3501 ecf79ecb863bb37e24b3db8277d7d1c7 "pdflatex"
+  "main.run.xml" 1736777378 2431 c5bf256f8e4580f023f9de0aa9eb28e2 "pdflatex"
+  "main.tex" 1736777267 50855 83f0b8f91344b4fb58bbb056db944998 ""
+  "main.toc" 1736777378 1915 012d6fbe89f4c1bf7f3b19746d4fcd1e "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

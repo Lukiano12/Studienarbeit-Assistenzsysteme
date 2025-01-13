@@ -183,7 +183,7 @@ Gutachterin / Gutachter:        & \quad \gutachterdhbw \\ [2ex]
 % Erklärung
 %---------------------------------------------------------
 
-\pagenumbering{roman}
+\pagenumbering{Roman}
 
 \section*{Erklärung}
 
@@ -203,12 +203,24 @@ Friedrichshafen, den \today \\[1ex]
 \rmfamily
 
 \clearpage
+
+\section*{Kurzfassung}
+\begin{spacing}{1.8}  % Adjust line spacing
+    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+English translation of the “Kurzfassung”.
+
+\end{spacing}
+
+\clearpage
 %---------------------------------------------------------
 % Abstract
 %---------------------------------------------------------
 \section*{Abstract}
+\begin{spacing}{1.8}  % Adjust line spacing
+    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 English translation of the “Kurzfassung”.
 
+\end{spacing}
 \clearpage
 
 % List of figures
@@ -298,7 +310,7 @@ der LKW-Sicherheit stellen Abbiegeassistenten dar.
 
     Die vorliegende Studienarbeit baut auf den Ergebnissen von C.
      Gründer und J. Simon\cite{grunder_simon_2024} sowie von A. D. Gardy\cite{gardy_andy_2023} auf.
-      In der Arbeit von Gründer und Simon wurde ein Prototyp für ein LKW-Abbiegeassistenzsystem entwickelt, das die Position von Fahrradfahrenden mithilfe von Bluetooth erfasst. Gardy [7] wiederum realisierte 
+      In der Arbeit von Gründer und Simon wurde ein Prototyp für ein LKW-Abbiegeassistenzsystem entwickelt, das die Position von Fahrradfahrenden mithilfe von Bluetooth erfasst. Gardy wiederum realisierte 
       eine winkelbasierte Bluetooth-Ortung über einen intelligenten Fahrradhelm, der als 
       Signal-Emitter fungierte. Dadurch können kritische Situationen beim Abbiegen erkannt und 
       frühzeitig Warnungen ausgegeben werden.
@@ -356,13 +368,22 @@ Ziel ist es, dass sowohl LKW-Fahrende als auch Fußgänger*innen beziehungsweise
 
 Die Realisierung dieser bidirektionalen Kommunikation erfordert eine durchdachte Systemarchitektur, welche die folgenden Aspekte berücksichtigt:
 
-- Datensicherheit und Datenschutz: Da personenbezogene Daten (z. B. Standortinformationen) erhoben werden, muss sichergestellt sein, dass sämtliche Prozesse DSGVO-konform gestaltet sind.  
-- Robuste Bluetooth-Kommunikation Die App muss in unterschiedlichsten Umgebungen, wie dicht besiedelten Stadtgebieten mit hohem Interferenzpotenzial, zuverlässig funktionieren.  
-- Benutzerfreundlichkeit: Eine intuitive Bedienung und eine minimalinvasive Warnung (etwa durch eine kurze Vibration) erhöhen die Akzeptanz des Systems bei allen Verkehrsbeteiligten.  
-- Skalierbarkeit: Sowohl technische Komponenten (z. B. Netzwerk- und Sensorlast) als auch die Benutzeranzahl sollten skalierbar sein, um eine möglichst breite Anwendung zu ermöglichen.
+\textbf{Datensicherheit und Datenschutz:}  Da personenbezogene Daten (z. B. Standortinformationen) erhoben werden, muss sichergestellt sein, dass sämtliche Prozesse DSGVO-konform gestaltet sind.  
+
+\textbf{Robuste Bluetooth-Kommunikation:}  Die App muss in unterschiedlichsten Umgebungen, wie dicht besiedelten Stadtgebieten mit hohem Interferenzpotenzial, zuverlässig funktionieren.  
+
+\textbf{Benutzerfreundlichkeit:}  Eine intuitive Bedienung und eine minimalinvasive Warnung (etwa durch eine kurze Vibration) erhöhen die Akzeptanz des Systems bei allen Verkehrsbeteiligten.  
+
+\textbf{Skalierbarkeit:}  Sowohl technische Komponenten (z. B. Netzwerk- und Sensorlast) als auch die Benutzeranzahl sollten skalierbar sein, um eine möglichst breite Anwendung zu ermöglichen.
 
 Durch die Kombination dieser Maßnahmen wird eine umfassende Lösung angestrebt, die auf den Erkenntnissen der Vorarbeiten aufbaut und die Verkehrssicherheit durch eine umfassende und zugängliche Warninfrastruktur verbessert.
 
+\begin{figure}[H]
+    \includegraphics[width=1\linewidth]{images/abbiegeassistent-scaled-7b2478b8.jpeg}\\[1ex]
+    \centering
+    \caption{Beispiel LKW-Abbiegeassistenzsystem potentielle Situation\cite{abbiegeassistent_website}}
+    \label{ABBILDUNG 76}
+\end{figure}
 
 \end{spacing}
 
@@ -426,6 +447,13 @@ zahlreichen Alltagsgeräten wie Smartphones, Kopfhörern und Freisprecheinrichtu
 \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 Ein zentrales Element der Bluetooth-Kommunikation stellt das Frequenzsprungverfahren (Frequency Hopping Spread Spectrum, FHSS) dar, bei dem das System bis zu 1600 Mal pro Sekunde zwischen 79 (in einigen Regionen 40) Kanälen wechselt.
  Dieser Mechanismus dient insbesondere der Minimierung von Interferenzen mit anderen Funkdiensten, die ebenfalls das 2,4-GHz-Band nutzen (z. B. WLAN).
+
+ \begin{figure}[H]
+    \includegraphics[width=1\linewidth]{images/2025-01-13_15h05_23.png}\\[1ex]
+    \centering
+    \caption{Modelldarstellung Bluetooth Datenübertragung(Frequency Hopping Spread Spectrum (FHSS)) \cite{branch_education_lidar_2023}}
+    \label{ABBILDUNG 76}
+\end{figure}
 
 Bluetooth-Geräte werden zu sogenannten Piconets zusammengeschlossen.
  Innerhalb eines Piconets übernimmt ein Master-Gerät (z. B. ein Smartphone) die Verbindungssteuerung und verwaltet mehrere Slaves (z. B. drahtlose Kopfhörer). 
