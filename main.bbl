@@ -110,6 +110,34 @@
       \verb https://www.u-blox.com/en/product/xplr-aoa-2-kit
       \endverb
     \endentry
+    \entry{dsgvo_gesetz}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73dada21c4d2953c3bb4fab866f321f4}{%
+           family={{DSGVO-Gesetz.de}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{fullhash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{fullhashraw}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{bibnamehash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{authorbibnamehash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{authornamehash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{authorfullhash}{73dada21c4d2953c3bb4fab866f321f4}
+      \strng{authorfullhashraw}{73dada21c4d2953c3bb4fab866f321f4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 11. Januar 2025}
+      \field{title}{Datenschutz-Grundverordnung (DSGVO) - Vollständiger Gesetzestext}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://dsgvo-gesetz.de/
+      \endverb
+      \verb{url}
+      \verb https://dsgvo-gesetz.de/
+      \endverb
+    \endentry
     \entry{abbiegeassistent_website}{online}{}{}
       \name{author}{1}{}{%
         {{hash=a989531c076941102cdb594bd7c2da36}{%
@@ -457,8 +485,8 @@
       \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
       \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
       \strng{authorfullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Letzter Zugriff am 11. Januar 2025}
