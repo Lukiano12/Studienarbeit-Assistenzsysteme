@@ -320,12 +320,12 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT C:\Users\User\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsl12.tfm
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
-INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
@@ -570,6 +570,7 @@ INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
 INPUT .\images\DHBW_d_R_FN_46mm_4c.jpg
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
