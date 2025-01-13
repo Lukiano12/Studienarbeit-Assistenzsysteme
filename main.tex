@@ -206,30 +206,82 @@ Friedrichshafen, den \today \\[1ex]
 
 \section*{Kurzfassung}
 \begin{spacing}{1.8}  % Adjust line spacing
-    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
-English translation of the “Kurzfassung”.
+    \fontsize{14pt}{14pt}\selectfont  % Font size and line spacing
+    Die vorliegende Studienarbeit untersucht die Entwicklung eines mobilen Warnsystems zur Minimierung von Abbiegeunfällen zwischen LKW und ungeschützten Verkehrsteilnehmenden. Aufbauend auf früheren Forschungsarbeiten wurde ein Konzept entwickelt, das die
+    Bluetooth-Angle-of-Arrival-Technologie (AoA) nutzt, um die Position 
+    von Fußgängerinnen und Radfahrerinnen präzise zu bestimmen. Ziel ist
+     die Entwicklung einer mobilen Applikation, die als Signalquelle für
+      ein LKW-Abbiegeassistenzsystem dient. Diese App bietet eine 
+      kostengünstige und zugängliche Lösung, um kritische 
+      Verkehrssituationen frühzeitig zu erkennen und Warnungen auszugeben.
+
+    Die Arbeit umfasst die Analyse der technischen Grundlagen 
+    von Bluetooth, die Implementierung einer Android-App 
+    für das Scannen 
+    und Erkennen von Bluetooth-Geräten sowie die Konzeption 
+    einer bidirektionalen Kommunikation zwischen App und LKW-System.
+     Aktuelle Herausforderungen bestehen in der fehlenden 
+     Senderfunktionalität der App und der unklaren Kompatibilität 
+     mit der verwendeten Hardware.
+    
+    Zukünftige Arbeiten sollten die vollständige bidirektionale 
+    Kommunikation, eine verbesserte Benutzerfreundlichkeit und
+    plattformübergreifende Anwendungen fokussieren. Langfristig kann das System dazu beitragen, die Verkehrssicherheit signifikant zu erhöhen und Leben zu retten.
 
 \end{spacing}
-
-\clearpage
 %---------------------------------------------------------
 % Abstract
 %---------------------------------------------------------
 \section*{Abstract}
 \begin{spacing}{1.8}  % Adjust line spacing
-    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
-English translation of the “Kurzfassung”.
+    \fontsize{14pt}{14pt}\selectfont  % Font size and line spacing
+    This study examines the development of a mobile warning system to reduce turning accidents between trucks and vulnerable road users. Building on previous research, a concept was developed utilizing Bluetooth Angle-of-Arrival (AoA) technology 
+    to precisely determine the position of pedestrians and cyclists.
+    The goal is to create a mobile application that acts as a signal 
+    emitter for a truck turn-assistance system, providing an affordable
+     and accessible solution for early detection of critical traffic 
+     situations and issuing warnings.
+
+    The work includes an analysis of the technical 
+    foundations of Bluetooth, the implementation of an Android 
+    app for scanning and detecting Bluetooth devices, 
+    and the conceptualization of bidirectional communication
+     between the app and the truck system. Current challenges 
+     include the lack of signal-emitting functionality in the app 
+     and unclear compatibility with the chosen hardware.
+    
+    Future developments should prioritize achieving complete 
+    bidirectional communication, enhancing user-friendliness, 
+    and extending the solution to other platforms. In the long term,
+     the system has the potential to significantly improve traffic safety
+      and save lives.
 
 \end{spacing}
 \clearpage
 
+\section*{Hilfsmittel}
+\begin{spacing}{1.8}  % Adjust line spacing
+    \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
+
+    Im Rahmen dieser Arbeit wurden verschiedene Hilfsmittel verwendet, von denen
+    insbesondere der Einsatz von LLMs (Large Language Models) von Bedeutung ist.
+    
+    Die Autoren haben LLMs, wie beispielsweise ChatGPT, genutzt, um allgemeinen
+    Code (z.B. Klassen und Funktionskörper) für die Arbeit implementieren zu lassen.
+    Es ist den Autoren wichtig zu betonen, dass die dem Projekt zugrunde liegende
+    Algorithmik, sofern nicht anders gekennzeichnet, selbst entwickelt wurde und auf
+    eigenem Gedankengut basiert.
+
+\end{spacing}
+
+\clearpage
 % List of figures
-\addcontentsline*{toc}{section}{Abbildungsverzeichnis}  % Add section to table of contents
+\addcontentsline*{toc}{section}{}  % Add section to table of contents
 \listoffigures
 
 \clearpage
 
-\section*{Abbkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}
 \begin{spacing}{1.8}  % Adjust line spacing
     \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 
@@ -252,6 +304,8 @@ English translation of the “Kurzfassung”.
    \textbf{UI} - User Interface
 
    \textbf{UX} - User Experience
+
+   \textbf(XML) - Extensible Markup Language
 
 
 \end{spacing}
@@ -348,6 +402,7 @@ Abbiegen von LKW signifikant zu erhöhen und dadurch Unfallzahlen zu reduzieren.
 \clearpage
 
 \section{Idee und Konzept}
+\label{sec:Idee und Konzept}
 
 
 
@@ -458,6 +513,14 @@ Ein zentrales Element der Bluetooth-Kommunikation stellt das Frequenzsprungverfa
 Bluetooth-Geräte werden zu sogenannten Piconets zusammengeschlossen.
  Innerhalb eines Piconets übernimmt ein Master-Gerät (z. B. ein Smartphone) die Verbindungssteuerung und verwaltet mehrere Slaves (z. B. drahtlose Kopfhörer). 
  Ein Master kann bis zu sieben aktive Slaves parallel betreiben, während weitere Geräte in einem passiven Modus verbleiben können.
+
+ \begin{figure}[H]
+    \includegraphics[width=1\linewidth]{images/Piconet.png}\\[1ex]
+    \centering
+    \caption{Piconets \cite{wikipedia_piconet}}
+    \label{ABBILDUNG 76}
+\end{figure}
+
 \end{spacing}
 
 \subsection{Verbindungsaufbau}
@@ -475,14 +538,13 @@ Verbindung wird unter anderem eine 128-Bit-Verschlüsselung genutzt, die Daten v
 \begin{spacing}{1.8}  % Adjust line spacing
 \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 
-5.4 Bluetooth-Klassen
 Um unterschiedlichen Anforderungen an die Reichweite gerecht zu werden, sind verschiedene Leistungsklassen definiert:
 
-Klasse 1: Reichweite von bis zu 100 Metern, häufig in industriellen Anwendungen genutzt.
+\textbf{Klasse 1:} Reichweite von bis zu 100 Metern, häufig in industriellen Anwendungen genutzt.
 
-Klasse 2: Reichweite von etwa 10 Metern, gängiger Standard für viele Consumer-Geräte.
+\textbf{Klasse 2:} Reichweite von etwa 10 Metern, gängiger Standard für viele Consumer-Geräte.
 
-Klasse 3: Reichweite von ungefähr 1 Meter, in der Praxis selten anzutreffen.
+\textbf{Klasse 3:} Reichweite von ungefähr 1 Meter, in der Praxis selten anzutreffen.
 
 \end{spacing}
 
@@ -493,11 +555,11 @@ Klasse 3: Reichweite von ungefähr 1 Meter, in der Praxis selten anzutreffen.
 
 Die Entwicklung von Bluetooth umfasst verschiedene Versionen, die im Laufe der Zeit insbesondere Verbesserungen in Bezug auf Datenrate, Reichweite und Energieverbrauch erfahren haben:
 
-Bluetooth 4.0 (Bluetooth Low Energy, BLE): Erhebliche Reduktion des Energiebedarfs, wodurch vor allem in kleinen batteriebetriebenen Sensoren und Wearables eine langfristige Nutzbarkeit erzielt werden kann.
+\textbf{Bluetooth 4.0 (Bluetooth Low Energy (BLE)):} Erhebliche Reduktion des Energiebedarfs, wodurch vor allem in kleinen batteriebetriebenen Sensoren und Wearables eine langfristige Nutzbarkeit erzielt werden kann.
 
-Bluetooth 5.0: Erweiterung der Reichweite, höhere Datenraten und verbesserte Stabilität.
+\textbf{Bluetooth 5.0:} Erweiterung der Reichweite, höhere Datenraten und verbesserte Stabilität.
 
-Bluetooth 5.1: Einführung der Angle-of-Arrival-Technologie (AoA), die eine deutlich präzisere Lokalisation von Geräten ermöglicht. Für das hier vorgestellte Abbiegeassistenzsystem ist diese Funktion insbesondere deshalb relevant, weil sie 
+\textbf{Bluetooth 5.1:} Einführung der Angle-of-Arrival-Technologie (AoA), die eine deutlich präzisere Lokalisation von Geräten ermöglicht. Für das hier vorgestellte Abbiegeassistenzsystem ist diese Funktion insbesondere deshalb relevant, weil sie 
 die genaue Positionsbestimmung von Fußgänger*innen oder Fahrradfahrenden gegenüber einem LKW unterstützt.
 
 Da Bluetooth 5.1 noch nicht in allen aktuellen Endgeräten implementiert ist, kann die praktische Einsetzbarkeit einer solchen Lösung derzeit eingeschränkt sein. Die Verbreitung neuer Technologien nimmt jedoch meist mit der Zeit zu, sodass eine breitere Unterstützung in absehbarer Zukunft zu erwarten ist.
@@ -513,7 +575,7 @@ Zu den Vorteilen von Bluetooth zählen die universelle Verfügbarkeit in moderne
 
 Allerdings existieren auch Herausforderungen wie potenzielle Interferenzen in dicht belegten Frequenzbereichen, eine im Vergleich zu anderen Funktechnologien (z. B. WLAN) geringere Datenrate und eine begrenzte Reichweite. Trotz dieser Einschränkungen hat sich Bluetooth als praxistaugliche Kurzstreckentechnologie etabliert und wird fortlaufend weiterentwickelt.
 
-Insgesamt stellt Bluetooth aufgrund seiner Flexibilität, Energieeffizienz und weitreichenden Verbreitung eine zentrale Basis für die Realisierung von Kurzstreckenkommunikation dar. Für das in dieser Studienarbeit vorgestellte Abbiegeassistenzsystem sind insbesondere die zusätzlichen Fähigkeiten von Bluetooth 5.1 von Interesse, da sie eine verbesserte Lokalisierung durch die Angle-of-Arrival-Technologie ermöglichen. Trotz bestehender Einschränkungen in puncto Reichweite und möglicher Interferenzen bietet Bluetooth somit eine solide Grundlage, um Verkehrsobjekte zuverlässig miteinander zu vernetzen und Warnhinweise bei drohenden
+Insgesamt stellt Bluetooth aufgrund seiner Flexibilität, Energieeffizienz und weitreichenden Verbreitung eine zentrale Basis für die Realisierung von Kurzstreckenkommunikation dar. Für das in dieser Studienarbeit vorgestellte Abbiegeassistenzsystem sind insbesondere die zusätzlichen Fähigkeiten von Bluetooth 5.1 von Interesse, da sie eine verbesserte Lokalisierung durch die Angle-of-Arrival-Technologie ermöglichen. Trotz bestehender Einschränkungen in der Reichweite und möglicher Interferenzen bietet Bluetooth somit eine solide Grundlage, um Verkehrsobjekte zuverlässig miteinander zu vernetzen und Warnhinweise bei drohenden
  Gefahrensituationen in Echtzeit zu übermitteln.
 \end{spacing}
 
@@ -550,14 +612,21 @@ Android sowohl wirtschaftlich als auch organisatorisch günstiger ist. Sobald di
 \fontsize{14pt}{15pt}\selectfont  % Font size and line spacing
 
 Android Studio ist die von Google bereitgestellte Entwicklungsumgebung für das Android-Betriebssystem 
-und basiert auf dem IntelliJ-IDEA-Framework von JetBrains. Durch seine umfangreichen Werkzeuge, die von Code-Editor und Debugger 
+und basiert auf dem IntelliJ-IDEA-Framework\cite{jetbrains_android_application} von JetBrains. Durch seine umfangreichen Werkzeuge, die von Code-Editor und Debugger 
 über einen Emulator bis hin zu spezialisierten Hilfsmitteln für die Gestaltung der 
 Benutzeroberfläche reichen, ist es bestens auf die Bedürfnisse der Android-Entwicklung zugeschnitten.
+
+\begin{figure}[H]
+    \includegraphics[width=1\linewidth]{images/Android-Studio-user-interface-during-the-development-of-Android-mobile-App-Figure.jpg}\\[1ex]
+    \centering
+    \caption{Benutzeroberfläche Android Studio\cite{researchgate_android_studio}}
+    \label{ABBILDUNG 76}
+\end{figure}
 
 Ein entscheidender Vorteil liegt in der Integration aller relevanten Entwicklungsaspekte in einer einzigen
  Umgebung. Dank des eingebauten Build-Systems Gradle lassen sich verschiedene Konfigurationen (z. B. Debug- und Release-Versionen) 
  zentral verwalten, was insbesondere in größeren Entwicklerteams zu einer strukturierten und reproduzierbaren Arbeitsweise beiträgt. 
- Darüber hinaus stellt Android Studio eine visuelle Layout-Ansicht bereit, in der UI-Komponenten per Drag-and-Drop platziert werden können. 
+ Darüber hinaus stellt Android Studio eine visuelle Layout-Ansicht bereit, in der UI(User Interface)-Komponenten per Drag-and-Drop platziert werden können. 
  Änderungen an der Benutzeroberfläche sind sofort sichtbar, ohne dass die App jedes Mal neu kompiliert werden muss.
 
 Der Einsatz von Android Studio wird zudem durch die große Community gestützt, die Anleitungen, Tutorials und Hilfestellungen bietet. 
@@ -590,15 +659,15 @@ Anwendung, sodass sie für diese Studienarbeit eine solide Basis für die Umsetz
 
 Die im Folgenden vorgestellte Android-App demonstriert exemplarisch, wie eine Anwendung zur Erfassung und Anzeige ermittelter Bluetooth-Geräte 
 implementiert werden kann. Hierbei stehen insbesondere das Aktivieren von Bluetooth und die Suche nach sichtbaren Geräten im Vordergrund. 
-Die Implementierung erfolgt mithilfe verschiedener Klassen und XML-Layouts, die im Quellcodeauszug ersichtlich sind.
+Die Implementierung erfolgt mithilfe verschiedener Klassen und XML(Extensible Markup Language)-Layouts, die im Quellcodeauszug ersichtlich sind.
 
 \subsubsection{Bluetooth-Erkennung und Warnfunktion}
 
 Zentrale Komponenten dieser App sind das Aktivieren und Deaktivieren von Bluetooth, die Suche nach sichtbaren Geräten und das Auslösen von 
-Warnhinweisen (z. B. in Form einer Vibration oder einer Dialogmeldung). Die Hauptlogik befindet sich in der MainActivity.
+Warnhinweisen (z. B. in Form einer Vibration oder einer Dialogmeldung). Die Hauptlogik befindet sich in der MainActivity\cite{lukiano12_lkw_assist}.
 
-\textbf{Aktivieren des Bluetooth-Adapters:} Beim Betätigen des bluetoothButton wird geprüft, ob Bluetooth auf dem Gerät vorhanden und aktiviert ist. 
-Ist dies nicht der Fall, fordert die Anwendung mittels eines Intent den oder die Nutzende auf, Bluetooth zu aktivieren.
+\textbf{Aktivieren des Bluetooth-Adapters\cite{lukiano12_lkw_assist}:} Beim Betätigen des bluetoothButton wird geprüft, ob Bluetooth auf dem Gerät vorhanden und aktiviert ist. 
+Ist dies nicht der Fall, fordert die Anwendung mittels eines Intent den oder die Nutzende auf, Bluetooth zu aktivieren:
 
 \begin{lstlisting}
     // Methode zum Umschalten von Bluetooth
@@ -631,8 +700,8 @@ Ist dies nicht der Fall, fordert die Anwendung mittels eines Intent den oder die
         \label{ABBILDUNG 76}
     \end{figure}
 
-\textbf{Scanning von Bluetooth-Geräten:} Sobald Bluetooth aktiv ist, wird mittels \texttt{startDiscovery()} nach sichtbaren Geräten gesucht. 
-Dabei registriert sich die Anwendung im BroadcastReceiver (\texttt{bluetoothReceiver}) für das Ereignis \texttt{BluetoothDevice.ACTION\_FOUND}, um gefundene Geräte abzufangen.
+\textbf{Scanning von Bluetooth-Geräten\cite{lukiano12_lkw_assist}:} Sobald Bluetooth aktiv ist, wird mittels \texttt{startDiscovery()} nach sichtbaren Geräten gesucht. 
+Dabei registriert sich die Anwendung im BroadcastReceiver (\texttt{bluetoothReceiver}) für das Ereignis \texttt{BluetoothDevice.ACTION\_FOUND}, um gefundene Geräte abzufangen:
 
 \begin{lstlisting}
     // Methode zum Starten des Bluetooth-Discovery-Vorgangs
@@ -670,12 +739,12 @@ Dabei registriert sich die Anwendung im BroadcastReceiver (\texttt{bluetoothRece
     \begin{figure}[H]
         \includegraphics[width=0.5\linewidth]{images/Screenshot_20250113_094628_Bluetooth App.jpg}\\[1ex]
         \centering
-        \caption{Beispiel Pop-up "Scanning for Bluetooth devices"\cite{lukiano12_lkw_assist}}
+        \caption{Beispiel Pop-up Scanning for Bluetooth devices\cite{lukiano12_lkw_assist}}
         \label{ABBILDUNG 76}
     \end{figure}
 
-\textbf{Erkennung neuer Geräte:} Für jedes neu erkannte Gerät wird eine Vibration ausgelöst (vibratePhone()), 
-und in einem Popup-Fenster (showDeviceDetectedPopup(...)) das gefundene Gerät angezeigt. Zudem wird die Gerätebezeichnung in einer ArrayList (scannedDevicesList) gespeichert.
+\textbf{Erkennung neuer Geräte\cite{lukiano12_lkw_assist}:} Für jedes neu erkannte Gerät wird eine Vibration ausgelöst (vibratePhone()), 
+und in einem Popup-Fenster (showDeviceDetectedPopup(...)) das gefundene Gerät angezeigt. Zudem wird die Gerätebezeichnung in einer ArrayList (scannedDevicesList) gespeichert:
 
 \begin{lstlisting}
     // BroadcastReceiver, der auf gefundene Bluetooth-Geraete reagiert
@@ -715,8 +784,9 @@ und in einem Popup-Fenster (showDeviceDetectedPopup(...)) das gefundene Gerät a
         \label{ABBILDUNG 76}
     \end{figure}
 
-\textbf{Erneutes Scannen:} Nach Ablauf eines festgelegten Zeitintervalls (hier 12 Sekunden) wird das Scannen erneuert (postDelayed(bluetoothRunnable, 12000)), 
-solange Bluetooth aktiv bleibt und weitere Geräte in der Nähe sein könnten.
+   
+\textbf{Erneutes Scannen\cite{lukiano12_lkw_assist}:} Nach Ablauf eines festgelegten Zeitintervalls (hier 12 Sekunden) wird das Scannen erneuert (postDelayed(bluetoothRunnable, 12000)), 
+solange Bluetooth aktiv bleibt und weitere Geräte in der Nähe sein könnten:
 
 \begin{lstlisting}
     else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
@@ -726,8 +796,8 @@ solange Bluetooth aktiv bleibt und weitere Geräte in der Nähe sein könnten.
     }
     \end{lstlisting}
 
-\textbf{Vibrationswarnung:} Zur Warn- oder Hinweisausgabe nutzt die Anwendung die Vibrationsfunktion über das Vibrator-Interface. 
-Abhängig von der Android-Version (ab Android 8.0 mit VibrationEffect) werden angepasste Vibrationsschemata realisiert.
+\textbf{Vibrationswarnung\cite{lukiano12_lkw_assist}:} Zur Warn- oder Hinweisausgabe nutzt die Anwendung die Vibrationsfunktion über das Vibrator-Interface. 
+Abhängig von der Android-Version (ab Android 8.0 mit VibrationEffect) werden angepasste Vibrationsschemata realisiert:
 
 \begin{lstlisting}
     // Methode zum Ausloesen einer kurzen Vibration (500ms)
@@ -761,9 +831,9 @@ private void showDeviceDetectedPopup(String deviceName) {
     \end{lstlisting}
 
 \subsubsection{Geräteverwaltung und Anzeigefunktionen}
-\textbf{ScannedDevicesActivity:} Die von der MainActivity übergebene Liste erkannter Geräte (scannedDevicesList) wird in dieser Activity mithilfe eines ListView visualisiert. 
+\textbf{ScannedDevicesActivity\cite{lukiano12_lkw_assist}:} Die von der MainActivity übergebene Liste erkannter Geräte (scannedDevicesList) wird in dieser Activity mithilfe eines ListView visualisiert. 
 Einfache ArrayAdapter-Elemente dienen zur Anzeige der Gerätenamen. 
-Dadurch erhalten Nutzer*innen einen Überblick über alle während der Laufzeit entdeckten Bluetooth-Geräte.
+Dadurch erhalten Nutzer*innen einen Überblick über alle während der Laufzeit entdeckten Bluetooth-Geräte:
 
 \begin{lstlisting}
     // Zweite Activity zur Anzeige der gefundenen Geraete
@@ -787,29 +857,34 @@ Dadurch erhalten Nutzer*innen einen Überblick über alle während der Laufzeit 
     }
     \end{lstlisting}
 
+    \begin{figure}[H]
+        \includegraphics[width=0.5\linewidth]{images/Screenshot_20250113_094607_Bluetooth App.jpg}\\[1ex]
+        \centering
+        \caption{Liste der erkannent bzw. gescannten Bluetooth-Geräte\cite{lukiano12_lkw_assist}}
+        \label{ABBILDUNG 76}
+    \end{figure}
+
 \subsubsection{Layout und Benutzeroberfläche}
 Die grafische Darstellung der App erfolgt über verschiedene XML-Dateien, die einerseits die Anordnung von Schaltflächen und Textfeldern definieren und andererseits die 
 Logik zur Navigation zwischen den Ansichten unterstützen:
 
-\textbf{activity\_main.xml:} Enthält drei Schaltflächen für das Ein- oder Ausschalten von Bluetooth, die Anzeige der wöchentlichen Nutzungszeit und die Anzeige der erkannten Geräte.
+\textbf{activity\_main.xml\cite{lukiano12_lkw_assist}:} Enthält drei Schaltflächen für das Ein- oder Ausschalten von Bluetooth, die Anzeige der wöchentlichen Nutzungszeit und die Anzeige der erkannten Geräte.
 
-\textbf{activity\_scanned\_devices.xml} Stellt eine Listenansicht (ListView) bereit, in welcher die erkannten Bluetooth-Geräte angezeigt werden.
-
-\textbf{activity\_weekly\_usage.xml} Zeigt die zusammengefasste wöchentliche Nutzungszeit in Stunden und Minuten an.
+\textbf{activity\_scanned\_devices.xml\cite{lukiano12_lkw_assist}:} Stellt eine Listenansicht (ListView) bereit, in welcher die erkannten Bluetooth-Geräte angezeigt werden.
 
 Die klare Strukturierung der Layouts ermöglicht einen intuitiven Aufbau der Benutzeroberfläche. Durch den Verzicht auf übermäßig 
-komplexe Design-Elemente bleiben sämtliche Hauptfunktionen (Bluetooth-Scan, Geräteliste, Nutzungszeit) leicht zugänglich.
+komplexe Design-Elemente bleiben sämtliche Hauptfunktionen (Bluetooth-Scan und Geräteliste) leicht zugänglich.
 
 \subsubsection{Berechtigungen und Manifest-Konfiguration}
 In der Datei AndroidManifest.xml sind alle nötigen Berechtigungen und Activity-Deklarationen aufgeführt:
 
-\textbf{Bluetooth-Berechtigungen:} Die App benötigt verschiedene Berechtigungen, um Bluetooth zu verwenden. Ältere Android-Versionen (bis Android 11) benötigen etwa
+\textbf{Bluetooth-Berechtigungen\cite{lukiano12_lkw_assist}:} Die App benötigt verschiedene Berechtigungen, um Bluetooth zu verwenden. Ältere Android-Versionen (bis Android 11) benötigen etwa
  android.permission.BLUETOOTH und android.permission.BLUETOOTH\_ADMIN, während neuere Versionen (ab Android 12, API-Level 31)
   zusätzlich android.permission.BLUETOOTH\_CONNECT und android.permission.BLUETOOTH\_SCAN fordern.
 
-\textbf{Vibrationsberechtigung:} Für das Auslösen der Vibration wird die Berechtigung android.permission.VIBRATE definiert, die ab bestimmten Android-Versionen separat eingefordert werden kann.
+\textbf{Vibrationsberechtigung\cite{lukiano12_lkw_assist}:} Für das Auslösen der Vibration wird die Berechtigung android.permission.VIBRATE definiert, die ab bestimmten Android-Versionen separat eingefordert werden kann.
 
-\textbf{Activities:} Sowohl die MainActivity als auch die ScannedDevicesActivity werden 
+\textbf{Activities\cite{lukiano12_lkw_assist}:} Sowohl die MainActivity als auch die ScannedDevicesActivity werden 
 im Manifest eingetragen, damit das System sie beim App-Start bzw. bei der Navigation zwischen den Bildschirmen korrekt erkennen kann.
 
 \begin{lstlisting}
@@ -892,24 +967,23 @@ Die Entwicklung der mobilen Anwendung hat bislang große Fortschritte gemacht, i
 die das Produkt daran hindert, seine vollständige Funktionalität zu erreichen.
 
 Ein zentrales Ziel des Projekts bestand darin, dass die App sowohl als Empfänger
- als auch als Sender arbeiten kann. Bislang ist es jedoch nur möglich, dass die App Bluetooth-Signale 
+ als auch als Sender arbeiten kann (siehe Kapitel ~\ref{sec:Idee und Konzept}). Bislang ist es jedoch nur möglich, dass die App Bluetooth-Signale 
  empfängt und analysiert. Die angestrebte Funktion, mit der die App konkrete Signale an ein XPLR-Empfängerboard 
  senden könnte, wurde nicht vollständig umgesetzt. Dies ist ein kritischer Aspekt, da die Signalübermittlung erforderlich 
- ist, um den Fahrer eines Lkw rechtzeitig vor ungeschützten Verkehrsteilnehmenden, wie Fußgänger*innen oder Fahrradfahrenden, zu warnen.
+ ist, um den Fahrer eines LKW rechtzeitig vor ungeschützten Verkehrsteilnehmenden, wie Fußgänger*innen oder Fahrradfahrenden, zu warnen.
 
-\textbf{Ursachen des Problems:}
-Fehlende Senderfunktionalität der App
+\subsection{Ursachen des Problems}
+\textbf{Fehlende Senderfunktionalität der App:}
 Obwohl die App in der Lage ist, verschiedene Bluetooth-Signale zu empfangen, 
 gibt es bislang keine Implementierung, mit der die App als Signalquelle (Sender) fungieren kann. 
 Dies ist insbesondere für die Kommunikation mit dem XPLR-Empfängerboard von zentraler Bedeutung.
 
-Unklare Kompatibilität zwischen Handy und XPLR-Empfängerboard
+\textbf{Unklare Kompatibilität zwischen Handy und XPLR-Empfängerboard:}
 Es wurde versucht, Informationen direkt von der Herstellerfirma des 
 XPLR-Boards zu erhalten, um herauszufinden, ob eine direkte Kopplung zwischen einem Smartphone 
 und den Empfängerboards technisch möglich ist. Leider konnte bis zum aktuellen Entwicklungsstand 
 keine rechtzeitige und konkrete Rückmeldung seitens der Firma eingeholt werden.
 
-\textbf{Bedeutung des Problems:}
 Das fehlende Sender-Modul stellt eine erhebliche Einschränkung 
 für die angestrebte Anwendung dar. Die Funktion, über Bluetooth gezielte Warnsignale an 
 das XPLR-Board zu senden, ist ein wesentlicher Schritt zur Realisierung einer umfassenden und bidirektionalen 
