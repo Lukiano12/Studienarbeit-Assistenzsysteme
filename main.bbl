@@ -446,6 +446,35 @@
       \verb https://www.golem.de/news/funkstandard-warum-bluetooth-mit-25-jahre-alter-technik-erfolgreich-ist-2310-178017.html
       \endverb
     \endentry
+    \entry{brocode_python_course}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=70e7e226d59ef183cc4727a699556ac0}{%
+           family={{Bro Code}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{fullhash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{fullhashraw}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{bibnamehash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{authorbibnamehash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{authornamehash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{authorfullhash}{70e7e226d59ef183cc4727a699556ac0}
+      \strng{authorfullhashraw}{70e7e226d59ef183cc4727a699556ac0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriff am 11. Januar 2025}
+      \field{title}{Java Full Course for free}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=xk4_1vDrzzo&ab_channel=BroCode
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=xk4_1vDrzzo&ab_channel=BroCode
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
